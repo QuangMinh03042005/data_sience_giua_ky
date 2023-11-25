@@ -7,7 +7,6 @@ import pandas as pd
 import numpy as np
 
 data = pd.read_csv("./shopping_trends.csv")
-# print(data.head())
 # print("max age: ",max(data["Age"]))
 # print("max purchase amout: ", max(data["Purchase Amount (USD)"]))
 # print("mean age: ", np.mean(data["Age"]))
@@ -18,14 +17,7 @@ data = pd.read_csv("./shopping_trends.csv")
 x = data["Age"]
 y = data["Purchase Amount (USD)"]
 
-# def myFunc(x):
-#     return x >= 50
-
-# mymodel = list(filter(myFunc, x))
-
-
 plt.scatter(x, y)
-# plt.plot(x, mymodel)
 plt.ylim(ymin=0, ymax=200)
 plt.xlim(xmin=0, xmax=100)
 plt.xlabel("Age")
